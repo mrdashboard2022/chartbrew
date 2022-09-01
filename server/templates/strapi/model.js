@@ -319,7 +319,9 @@ module.exports.build = async (projectId, templateData, dashboardOrder) => {
   const {
     strapiToken, apiEndpoint, collection, strapiHost, connection_id, charts,
   } = templateData;
-
+  
+console.log(">>>>> templateData", templateData);
+  
   if ((!strapiToken || !apiEndpoint || !strapiHost || !collection) && !connection_id) {
     return Promise.reject("Missing required arguments to create the template");
   }
